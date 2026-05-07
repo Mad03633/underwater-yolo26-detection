@@ -1,0 +1,12 @@
+path: your_path\underwater-yolo26-detection\dataset
+train: images/train
+val: images/val
+test: images/test
+nc: 6
+names:
+- fish
+- small_fish
+- crab
+- shrimp
+- jellyfish
+- starfish
