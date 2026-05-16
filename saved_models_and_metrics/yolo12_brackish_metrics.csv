@@ -1,0 +1,2 @@
+Model,Image Size,Batch Size,Epochs,Precision,Recall,mAP@0.5,mAP@0.5:0.95
+YOLO12n,640,4,50,0.73869,0.65611,0.70757,0.39562
