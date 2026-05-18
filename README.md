@@ -44,3 +44,52 @@ The main objectives of this project are:
 6. Analyze the suitability of YOLO26 for real-time underwater detection.
 
 ---
+
+# Models Used
+
+The project may include experiments with the following models:
+
+- YOLOv8
+- YOLOv10
+- YOLOv11
+- YOLOv12
+- YOLO26
+
+The main model of interest is **YOLO26**, which is designed for real-time object detection and focuses on improving accuracy, speed, and deployment efficiency.
+
+---
+
+## Dataset Format
+
+The link for Brackish dataset: https://www.kaggle.com/datasets/aalborguniversity/brackish-dataset
+
+The dataset must be organized in YOLO format. Each image should have a corresponding `.txt` annotation file.
+
+Example annotation format:
+
+```text
+class_id x_center y_center width height
+```
+
+All coordinates must be normalized between `0` and `1`.
+
+Example:
+
+```text
+0 0.512 0.438 0.231 0.184
+```
+
+The `data.yaml` file should contain the dataset paths and class names:
+
+```yaml
+train: data/train/images
+val: data/valid/images
+test: data/test/images
+
+nc: 4
+names: ["fish", "jellyfish", "starfish", "crab"]
+```
+
+Change the class names according to your dataset.
+
+---
