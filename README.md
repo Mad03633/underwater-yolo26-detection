@@ -158,3 +158,27 @@ The validation results include:
 
 ---
 
+## Results
+
+| Model | Precision | Recall | mAP50 | mAP50-95 |
+|---|---:|---:|---:|---:|
+| YOLOv8n | 0.77440 | 0.58594 | 0.65892 | 0.35623 |
+| YOLOv10n | 0.62706 | 0.57371 | 0.60198 | 0.33795 |
+| YOLOv11n | 0.69170 | 0.59485 | 0.65464 | 0.36552 |
+| YOLOv12n | 0.73869 | 0.65611 | 0.70757 | 0.39562 |
+| YOLO26n | 0.69637 | 0.61938 | 0.67166 | 0.38571 |
+
+<p align="center">
+  <img src="https://github.com/Mad03633/underwater-yolo26-detection/blob/dev/figures/acc_efficiency_scatter.jpg" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/Mad03633/underwater-yolo26-detection/blob/dev/figures/training_curves_yolo.jpg" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/Mad03633/underwater-yolo26-detection/blob/dev/figures/yolo_results.jpg" />
+</p>
+
+
+---
