@@ -116,3 +116,25 @@ If CUDA is used, install a PyTorch version compatible with your GPU and CUDA ver
 
 ---
 
+## Training
+
+To train a YOLO model, run:
+
+```bash
+yolo detect train model=yolo26n.pt data=data.yaml epochs=100 imgsz=640 batch=16
+```
+
+Example for YOLOv8:
+
+```bash
+yolo detect train model=yolov8n.pt data=data.yaml epochs=100 imgsz=640 batch=16
+```
+
+The training results will be saved in:
+
+```text
+runs/detect/train/
+```
+
+---
+
