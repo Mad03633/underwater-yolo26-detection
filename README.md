@@ -93,3 +93,26 @@ names: ["fish", "jellyfish", "starfish", "crab"]
 Change the class names according to your dataset.
 
 ---
+
+## Requirements
+
+Example `requirements.txt`:
+
+```text
+ultralytics
+torch
+torchvision
+opencv-python
+matplotlib
+pandas
+numpy
+scikit-learn
+seaborn
+jupyter
+notebook
+```
+
+If CUDA is used, install a PyTorch version compatible with your GPU and CUDA version.
+
+---
+
