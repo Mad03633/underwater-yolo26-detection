@@ -93,3 +93,92 @@ names: ["fish", "jellyfish", "starfish", "crab"]
 Change the class names according to your dataset.
 
 ---
+
+## Requirements
+
+Example `requirements.txt`:
+
+```text
+ultralytics
+torch
+torchvision
+opencv-python
+matplotlib
+pandas
+numpy
+scikit-learn
+seaborn
+jupyter
+notebook
+```
+
+If CUDA is used, install a PyTorch version compatible with your GPU and CUDA version.
+
+---
+
+## Training
+
+To train a YOLO model, run:
+
+```bash
+yolo detect train model=yolo26n.pt data=data.yaml epochs=100 imgsz=640 batch=16
+```
+
+Example for YOLOv8:
+
+```bash
+yolo detect train model=yolov8n.pt data=data.yaml epochs=100 imgsz=640 batch=16
+```
+
+The training results will be saved in:
+
+```text
+runs/detect/train/
+```
+
+---
+
+## Validation
+
+After training, validate the model:
+
+```bash
+yolo detect val model=runs/detect/train/weights/best.pt data=data.yaml
+```
+
+The validation results include:
+
+- Precision
+- Recall
+- mAP50
+- mAP50-95
+- Confusion matrix
+- PR curve
+- F1 curve
+
+---
+
+## Results
+
+| Model | Precision | Recall | mAP50 | mAP50-95 |
+|---|---:|---:|---:|---:|
+| YOLOv8n | **0.77440** | 0.58594 | 0.65892 | 0.35623 |
+| YOLOv10n | 0.62706 | 0.57371 | 0.60198 | 0.33795 |
+| YOLOv11n | 0.69170 | 0.59485 | 0.65464 | 0.36552 |
+| YOLOv12n | 0.73869 | **0.65611** | **0.70757** | **0.39562** |
+| YOLO26n | 0.69637 | 0.61938 | 0.67166 | 0.38571 |
+
+<p align="center">
+  <img src="https://github.com/Mad03633/underwater-yolo26-detection/blob/dev/figures/acc_efficiency_scatter.jpg" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/Mad03633/underwater-yolo26-detection/blob/dev/figures/training_curves_yolo.jpg" />
+</p>
+
+<p align="center">
+  <img src="https://github.com/Mad03633/underwater-yolo26-detection/blob/dev/figures/yolo_results.jpg" />
+</p>
+
+
+---
