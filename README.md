@@ -138,3 +138,23 @@ runs/detect/train/
 
 ---
 
+## Validation
+
+After training, validate the model:
+
+```bash
+yolo detect val model=runs/detect/train/weights/best.pt data=data.yaml
+```
+
+The validation results include:
+
+- Precision
+- Recall
+- mAP50
+- mAP50-95
+- Confusion matrix
+- PR curve
+- F1 curve
+
+---
+
